@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340">
+  <rect width="480" height="340" rx="34" fill="#0b5960"/><circle cx="415" cy="45" r="85" fill="#efad92" opacity=".7"/><circle cx="55" cy="300" r="75" fill="#b9d8d1" opacity=".7"/>
+  <rect x="64" y="58" width="352" height="222" rx="18" fill="#071f29" stroke="#9bc9c0" stroke-width="3"/>
+  <circle cx="94" cy="88" r="7" fill="#efad92"/><circle cx="117" cy="88" r="7" fill="#f5c76b"/><circle cx="140" cy="88" r="7" fill="#9bc9c0"/>
+  <path d="M107 148h94M107 180h160M107 212h112" stroke="#efad92" stroke-width="10" stroke-linecap="round"/>
+  <path d="M320 139l24 24-24 24M288 187h36" fill="none" stroke="#b9d8d1" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="104" y="250" fill="#b9d8d1" font-family="monospace" font-size="14">MERN / UI / UX</text>
+</svg>

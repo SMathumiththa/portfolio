@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520">
+  <defs><linearGradient id="a" x1="0" x2="1"><stop stop-color="#0b5960"/><stop offset="1" stop-color="#123f43"/></linearGradient><linearGradient id="b"><stop stop-color="#efad92"/><stop offset="1" stop-color="#df8065"/></linearGradient></defs>
+  <rect width="640" height="520" rx="42" fill="#f8eee5"/>
+  <circle cx="520" cy="92" r="92" fill="#efad92" opacity=".55"/><circle cx="98" cy="430" r="130" fill="#b9d8d1" opacity=".7"/>
+  <rect x="105" y="82" width="430" height="302" rx="22" fill="url(#a)" transform="rotate(-3 320 233)"/>
+  <rect x="133" y="111" width="374" height="228" rx="10" fill="#071f29"/>
+  <path d="M184 189l-40 34 40 34M456 189l40 34-40 34M284 281l72-116" fill="none" stroke="#efad92" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="158" cy="370" r="17" fill="#df8065"/><circle cx="205" cy="370" r="17" fill="#f5c76b"/><circle cx="252" cy="370" r="17" fill="#9bc9c0"/>
+  <rect x="84" y="405" width="472" height="25" rx="12" fill="#0b5960"/><path d="M145 430h350l-35 28H180z" fill="#123f43"/>
+  <text x="136" y="148" fill="#b9d8d1" font-family="monospace" font-size="15">build • design • deploy</text>
+</svg>
