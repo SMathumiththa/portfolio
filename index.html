@@ -242,7 +242,11 @@ footer{background:#06353b;color:#c4d8d3;border-color:#327b7b}
 .project-gallery-card:hover img{transform:scale(1.08);filter:saturate(1.15)}
 .project-gallery-card .project-caption{padding:16px}
 .project-gallery-card h3{margin:0 0 5px;color:var(--ink)}
+.project-gallery-card h3 a:hover{color:var(--or2);text-decoration:underline}
 .project-gallery-card p{margin:0;color:var(--mute);font-size:.86rem}
+.project-gallery-card.live{cursor:pointer;position:relative;z-index:2}
+.project-gallery-card.live .live-btn{display:inline-block;margin-top:10px;padding:6px 14px;border-radius:99px;font-size:.8rem;font-weight:600;background:linear-gradient(90deg,var(--or),var(--or2));color:#fff;overflow:visible}
+.project-gallery-card h3 a{display:inline}
 @keyframes projectFloat{50%{transform:translateY(-8px)}}
 @media(max-width:900px){.project-gallery{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.project-gallery{grid-template-columns:1fr}.project-gallery-card img{height:auto;max-height:260px;object-fit:contain}}
@@ -329,7 +333,7 @@ footer{background:#06353b;color:#c4d8d3;border-color:#327b7b}
   <div class="title"><h2>My <span class="o">Projects</span></h2><p>A showcase of my recent work</p></div>
   <div class="project-gallery">
     <article class="project-gallery-card"><a href="img/donation.jpg" target="_blank" rel="noopener"><img src="img/donation.jpg" alt="MealBridge food donation project" loading="lazy"></a><div class="project-caption"><h3>MealBridge</h3><p>Food donation and real-time community platform.</p></div></article>
-    <article class="project-gallery-card"><a href="img/mock.jpg" target="_blank" rel="noopener"><img src="img/mock.jpg" alt="MockMate AI interview project" loading="lazy"></a><div class="project-caption"><h3>MockMate</h3><p>AI-powered mock interview experience.</p></div></article>
+    <article class="project-gallery-card live" data-href="https://ai-interview-sigma-pink.vercel.app/" tabindex="0" role="link" aria-label="Open MockMate live site"><a href="https://ai-interview-sigma-pink.vercel.app/" target="_blank" rel="noopener"><img src="img/mock.jpg" alt="MockMate AI interview project" loading="lazy"></a><div class="project-caption"><h3><a href="https://ai-interview-sigma-pink.vercel.app/" target="_blank" rel="noopener">MockMate</a></h3><p>AI-powered mock interview experience.</p><a class="live-btn" href="https://ai-interview-sigma-pink.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a></div></article>
     <article class="project-gallery-card"><a href="img/food%20oder.jpg" target="_blank" rel="noopener"><img src="img/food%20oder.jpg" alt="Food ordering project" loading="lazy"></a><div class="project-caption"><h3>Food Ordering</h3><p>Menu, ordering and order history system.</p></div></article>
     <article class="project-gallery-card"><a href="img/inven.jpg" target="_blank" rel="noopener"><img src="img/inven.jpg" alt="Inventory management project" loading="lazy"></a><div class="project-caption"><h3>Inventory Management</h3><p>Desktop stock and product management app.</p></div></article>
     <article class="project-gallery-card"><a href="img/tour.jpg" target="_blank" rel="noopener"><img src="img/tour.jpg" alt="Tour and travel website project" loading="lazy"></a><div class="project-caption"><h3>Tour &amp; Travel</h3><p>Responsive travel website and destination showcase.</p></div></article>
@@ -387,6 +391,11 @@ footer{background:#06353b;color:#c4d8d3;border-color:#327b7b}
     setTimeout(tick,(!del&&ci>=words[wi].length)||(del&&ci===words[wi].length)?1600:(del?35:70));
   })();
 
+  document.querySelectorAll('.live').forEach(function(c){
+    function go(){var w=window.open(c.dataset.href,'_blank','noopener');if(!w)location.href=c.dataset.href}
+    c.addEventListener('click',function(e){if(e.target.closest('a'))return;go()});
+    c.addEventListener('keydown',function(e){if(e.key==='Enter')go()});
+  });
   document.getElementById('cf').addEventListener('submit',function(e){
     e.preventDefault();var f=e.target;
     var body='Hi Mathumiththa,\n\n'+f.m.value+'\n\nFrom: '+f.f.value+' '+f.l.value+' ('+f.e.value+')';
