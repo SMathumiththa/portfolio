@@ -123,6 +123,10 @@ header{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-conte
 .project-gallery-card.live{cursor:pointer}
 .live-btn{display:inline-block;margin-top:auto;padding:7px 16px;border-radius:99px;font-size:.82rem;font-weight:600;background:linear-gradient(90deg,var(--or),var(--or2));color:var(--btnink)}
 .project-caption p+.live-btn{margin-top:12px}
+.live-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:12px}
+.live-btns .live-btn{margin-top:0}
+.live-btn.alt{background:none;border:2px solid var(--or);color:var(--ac);padding:5px 14px}
+.live-btn.alt:hover{background:var(--or);color:var(--btnink)}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){
   .project-gallery-card{animation:projectFloat 6s ease-in-out infinite}
   .project-gallery-card:nth-child(2n){animation-delay:-2s}
@@ -275,7 +279,7 @@ footer small{display:block}
 <section id="projects"><div class="wrap">
   <div class="title"><h2>My <span class="o">Projects</span></h2><p>A showcase of my recent work</p></div>
   <div class="project-gallery">
-    <article class="project-gallery-card"><a href="img/donation.jpg" target="_blank" rel="noopener"><img src="img/donation.jpg" alt="MealBridge food donation project" loading="lazy"></a><div class="project-caption"><h3>MealBridge</h3><p>Food donation and real-time community platform.</p></div></article>
+    <article class="project-gallery-card live" data-href="https://mealbridge-api-production.up.railway.app/" tabindex="0" role="link" aria-label="Open MealBridge live site"><a href="https://mealbridge-api-production.up.railway.app/" target="_blank" rel="noopener"><img src="img/donation.jpg" alt="MealBridge food donation project" loading="lazy"></a><div class="project-caption"><h3><a href="https://mealbridge-api-production.up.railway.app/" target="_blank" rel="noopener">MealBridge</a></h3><p>Food donation and real-time community platform.</p><div class="live-btns"><a class="live-btn" href="https://mealbridge-api-production.up.railway.app/" target="_blank" rel="noopener">Live Demo ↗</a><a class="live-btn alt" href="https://mealbridge-api-production.up.railway.app/admin/" target="_blank" rel="noopener">Admin ↗</a></div></div></article>
     <article class="project-gallery-card live" data-href="https://ai-interview-sigma-pink.vercel.app/" tabindex="0" role="link" aria-label="Open MockMate live site"><a href="https://ai-interview-sigma-pink.vercel.app/" target="_blank" rel="noopener"><img src="img/mock.jpg" alt="MockMate AI interview project" loading="lazy"></a><div class="project-caption"><h3><a href="https://ai-interview-sigma-pink.vercel.app/" target="_blank" rel="noopener">MockMate</a></h3><p>AI-powered mock interview experience.</p><a class="live-btn" href="https://ai-interview-sigma-pink.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a></div></article>
     <article class="project-gallery-card"><a href="img/food%20oder.jpg" target="_blank" rel="noopener"><img src="img/food%20oder.jpg" alt="Food ordering project" loading="lazy"></a><div class="project-caption"><h3>Food Ordering</h3><p>Menu, ordering and order history system.</p></div></article>
     <article class="project-gallery-card"><a href="img/inven.jpg" target="_blank" rel="noopener"><img src="img/inven.jpg" alt="Inventory management project" loading="lazy"></a><div class="project-caption"><h3>Inventory Management</h3><p>Desktop stock and product management app.</p></div></article>
